@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Catapult Referenz-Plattform
 
-## Getting Started
+Interne Cold-Call-Web-App fuer Catapult Content.
 
-First, run the development server:
+Ziel: Im Akquise-Gespraech schnell passende Referenzen nach Branche und Region finden und konkrete Erfolgszahlen nennen.
+
+## Schnellstart
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+App oeffnen unter [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Nutzung im Cold Call
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Branche per Pill-Filter auswaehlen (`Alle`, `Food & Beverage`, `Ofenbau`, usw.).
+- Optional im Suchfeld frei suchen (Kundenname, Ort, Erfolge).
+- Passende Kundenkarten werden links angezeigt, Karte synchronisiert rechts.
+- Klick auf Karte -> Marker fokussiert und ClientCard hervorgehoben.
+- Klick auf Marker -> zugehoerige Karte wird markiert und in den Fokus gescrollt.
 
-## Learn More
+## Datenpflege
 
-To learn more about Next.js, take a look at the following resources:
+Alle Referenzen werden statisch gepflegt in:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/data/clients.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Wichtige Typen:
 
-## Deploy on Vercel
+- `Branche`: Erlaubte Branchenwerte
+- `Client`: Datensatz pro Referenzkunde
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Pflichtfelder pro Kunde:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `id`: Eindeutige slug-artige ID (z. B. `hupsi-leberkas`)
+- `name`: Kundenname
+- `branche`: Muss ein gueltiger `Branche`-Wert sein
+- `ort`: Region/Ort fuer Suche und Anzeige
+- `lat`, `lng`: Koordinaten fuer Kartenmarker
+- `beschreibung`: Kurzbeschreibung
+- `erfolge`: Liste der Erfolge als Strings
+
+Hinweise fuer Erfolge:
+
+- Zahlen werden im UI automatisch orange hervorgehoben.
+- Unklare Inhalte koennen vorerst als `[PLACEHOLDER - ...]` eingetragen werden (werden visuell abgeschwaecht dargestellt).
+
+## Qualitaets- und Design-Standards
+
+- Next.js App Router + TypeScript, keine `any`-Typen.
+- Design an Catapult Finance Hub angelehnt (Tokens, Abstaende, Kartenstil).
+- Leaflet/OpenStreetMap ohne API-Key.
+
+## Verifikation
+
+```bash
+npm run lint
+npm run build
+```

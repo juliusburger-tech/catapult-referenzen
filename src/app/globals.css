@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), "Inter", "Segoe UI", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --font-heading: var(--font-sans);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-card: var(--radius-card-token);
+  --radius-container: var(--radius-container-token);
+  --shadow-card: var(--shadow-card-token);
+}
+
+:root {
+  --color-primary: #ff6f16;
+  --color-bg: #f5f0eb;
+  --color-surface: #ffffff;
+  --color-surface-raised: #fdf9f5;
+  --color-border-token: #e8e0d8;
+  --color-text: #111111;
+  --color-text-muted: #555555;
+  --color-text-subtle: #999999;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #eab308;
+  --radius-card-token: 10px;
+  --radius-container-token: 14px;
+  --shadow-card-token: 0 2px 12px rgba(0, 0, 0, 0.06);
+
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-text);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-text);
+  --primary: var(--color-primary);
+  --primary-foreground: #ffffff;
+  --secondary: var(--color-surface-raised);
+  --secondary-foreground: var(--color-text);
+  --muted: var(--color-surface-raised);
+  --muted-foreground: var(--color-text-muted);
+  --accent: var(--color-surface-raised);
+  --accent-foreground: var(--color-text);
+  --destructive: var(--color-error);
+  --border: var(--color-border-token);
+  --input: var(--color-border-token);
+  --ring: var(--color-primary);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  html {
+    @apply font-sans;
+  }
+}
