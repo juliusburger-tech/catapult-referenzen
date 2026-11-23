@@ -6,6 +6,9 @@ export type Branche =
   | "Immobilien"
   | "Einrichtung"
   | "Handwerk"
+  | "GaLaBau"
+  | "Dienstleistung"
+  | "Politik"
   | "Sonstige";
 
 export type Client = {
@@ -29,6 +32,9 @@ export const BRANCHEN_FILTER: readonly ["Alle", ...Branche[]] = [
   "Immobilien",
   "Einrichtung",
   "Handwerk",
+  "GaLaBau",
+  "Dienstleistung",
+  "Politik",
 ];
 
 export const clients: Client[] = [
@@ -50,4 +56,25 @@ export const clients: Client[] = [
   { id: "immovaria", name: "Immovaria", branche: "Immobilien", ort: "Nürnberg", lat: 49.45, lng: 11.08, beschreibung: "Bauträger & Projektentwicklung — denkmalgeschützte Immobilien, Bilanzsumme über 65 Mio. EUR", erfolge: ["[PLACEHOLDER - Reichweite/Views]", "[PLACEHOLDER - Anfragen/Leads]", "[PLACEHOLDER - Ergebnis]"] },
   { id: "stocker-einrichtung", name: "Stocker Einrichtungs GmbH", branche: "Einrichtung", ort: "Erlangen", lat: 49.59, lng: 11.0, beschreibung: "Exklusives Möbelhaus in Erlangen — Full-Service Möbel- und Einrichtungskonzept.", erfolge: ["Über 70 Leads in 6 Monaten generiert", "Mehrfach Abschlüsse im fünfstelligen Bereich", "Diverse hochwertige Sofas und teilweise ganze Hausausstattungen verkauft"] },
   { id: "luger-elektrotechnik", name: "Luger Elektrotechnik", branche: "Handwerk", ort: "Bayern", lat: 49.2, lng: 11.3, beschreibung: "Elektrotechnik-Fachbetrieb, regionaler Handwerksbetrieb", erfolge: ["10 Bewerbungen generiert", "1 Einstellung erfolgreich besetzt"] },
+  // --- Neu ergänzt (Nov 2026) ---
+  { id: "jw-doescher", name: "J.W. Döscher", branche: "Ofenbau", ort: "Beverstedt", lat: 53.43, lng: 8.82, beschreibung: "Traditionsreiches Ofenhaus in Norddeutschland — seit rund 210 Jahren am Markt.", erfolge: ["Über 20 Leads in den ersten 30 Tagen", "Rund 40 Anfragen in den ersten 10 Tagen der neuen Kampagne", "2 Öfen direkt verkauft"] },
+  { id: "bentlage-kamine", name: "Bentlage Kamine", branche: "Ofenbau", ort: "Süddeutschland", lat: 48.4, lng: 10.0, beschreibung: "Kamin- und Ofenstudio in Süddeutschland.", erfolge: ["Über 90 Leads in 3 Monaten", "Über 40.000 EUR Auftragsvolumen"] },
+  { id: "schornsteintechnik-neumarkt", name: "Schornsteintechnik Neumarkt (Rohrrino)", branche: "Ofenbau", ort: "Neumarkt i.d.OPf.", lat: 49.28, lng: 11.46, beschreibung: "Spezialist für Schornsteintechnik mit eigener Marke Rohrrino.", erfolge: ["Über 300 Leads in 3 Monaten", "Mehrfach fünfstellige Auftragsvolumen"] },
+  { id: "ofenfeuer-soutschek", name: "Ofenfeuer Soutschek", branche: "Ofenbau", ort: "Deutschland", lat: 49.3, lng: 11.9, beschreibung: "Ofen- und Kaminbaubetrieb.", erfolge: ["Über 60 Anfragen in 3 Monaten", "Mehrere Ofenobjekte verkauft"] },
+  { id: "edeka-rees", name: "Edeka Rees", branche: "Food & Beverage", ort: "Deutschland", lat: 51.76, lng: 6.4, beschreibung: "EDEKA-Kaufmann mit über 10 Märkten und rund 800 Mitarbeitern.", erfolge: ["Mitarbeitergewinnung und Marketing aus einer Hand", "23 Mitarbeiter eingestellt"] },
+  { id: "gans-brauerei", name: "Gans Brauerei", branche: "Food & Beverage", ort: "Raum Regensburg", lat: 49.02, lng: 12.1, beschreibung: "Familienbrauerei bei Regensburg.", erfolge: ["1 Braumeister eingestellt", "1 Bürokraft eingestellt"] },
+  { id: "original-berliner-doener", name: "Original Berliner Döner", branche: "Food & Beverage", ort: "Nürnberg", lat: 49.44, lng: 11.07, beschreibung: "Eine der bekanntesten Dönerketten Deutschlands.", erfolge: ["Mehrere Mio. Views erreicht", "Starke Absatzsteigerungen"] },
+  { id: "he-schu", name: "He-Schu", branche: "Food & Beverage", ort: "Deutschland", lat: 50.5, lng: 10.0, beschreibung: "Familienbetrieb seit 1853 in 7. Generation — Halbfertigerzeugnisse für Konditoreien, Bäckereien und Gastronomie.", erfolge: ["Dutzende Paletten Ware an Bäckereien und Großhändler vermittelt", "Nach erfolgreicher B2B-Kampagne auf das Catapult Lead-Up-Paket erweitert"] },
+  { id: "travellunch", name: "Travellunch", branche: "Food & Beverage", ort: "Deutschland", lat: 51.0, lng: 10.0, beschreibung: "Marke für Outdoor- und Expeditionsnahrung.", erfolge: ["Markenaufbau auf Social Media begleitet"] },
+  { id: "metzgerei-picard", name: "Metzgerei Picard", branche: "Food & Beverage", ort: "Deutschland", lat: 50.0, lng: 9.0, beschreibung: "Inhabergeführte Metzgerei.", erfolge: ["6-monatige Zusammenarbeit gestartet"] },
+  { id: "distler-vv", name: "Distler Vermögensverwaltung", branche: "Immobilien", ort: "Leipzig", lat: 51.34, lng: 12.37, beschreibung: "Vermögensverwaltung mit Fokus auf Kapitalanlageimmobilien in Leipzig.", erfolge: ["Leadpreis um 300 % gesenkt", "2,4 Mio. EUR Dealvolumen in 3 Monaten"] },
+  { id: "joko-dienstleistungen", name: "Joko Dienstleistungen", branche: "GaLaBau", ort: "Nürnberg", lat: 49.47, lng: 11.1, beschreibung: "Garten- und Landschaftsbau im Raum Nürnberg.", erfolge: ["47 Bewerbungen auf die Landschaftsgärtner-Stelle"] },
+  { id: "bronder-gartenbau", name: "Bronder Gartenbau", branche: "GaLaBau", ort: "Deutschland", lat: 50.2, lng: 8.5, beschreibung: "Garten- und Landschaftsbaubetrieb.", erfolge: ["3-monatige Leadgenerierung für Neukunden abgeschlossen"] },
+  { id: "blaza-gartenbau", name: "Blaza Gartenbau", branche: "GaLaBau", ort: "Deutschland", lat: 49.8, lng: 9.9, beschreibung: "Garten- und Landschaftsbaubetrieb.", erfolge: ["Leadgenerierung ab Januar 2027"] },
+  { id: "tuttahs-meyer", name: "TUTTAHS & MEYER Ingenieurgesellschaft", branche: "Dienstleistung", ort: "Aachen / Bochum / Berlin", lat: 50.78, lng: 6.08, beschreibung: "Ingenieurbüro für Siedlungswasserwirtschaft mit rund 84 Mitarbeitern an mehreren Standorten.", erfolge: ["Mitarbeitergewinnung für eine seit rund 2 Jahren offene Stelle (Konstrukteur/Bauzeichner)", "Seit September 2026 in Zusammenarbeit"] },
+  { id: "telis-oppelt", name: "Telis Finanz — Martin Oppelt", branche: "Dienstleistung", ort: "Burgbernheim", lat: 49.45, lng: 10.32, beschreibung: "Leiter mehrerer Telis-Finanz-Standorte in Mittelfranken.", erfolge: ["Recruiting von selbstständigen Vertriebspartnern (§34d) seit November 2026", "Einzugsgebiet Nürnberg, Fürth und Würzburg"] },
+  { id: "expect-leads", name: "Expect Leads GmbH", branche: "Dienstleistung", ort: "Deutschland", lat: 51.5, lng: 9.5, beschreibung: "Dienstleister im Bereich Leadgenerierung.", erfolge: ["Employer Branding mit quartalsweisem Drehtag", "Wöchentlich 1 Reel und 1 Foto"] },
+  { id: "rechtsklarheit", name: "Rechtsklarheit", branche: "Dienstleistung", ort: "Deutschland", lat: 52.0, lng: 10.5, beschreibung: "Personal-Brand-Account eines Rechtsanwalts zu Recht und Steuergestaltung.", erfolge: ["Von 0 auf 15.000 Follower in rund 5 Monaten", "Rein beratende Zusammenarbeit: Strategie, Formate und Videostrukturen"] },
+  { id: "neotreat", name: "neotreat", branche: "Medizin", ort: "Dortmund / Münster", lat: 51.51, lng: 7.47, beschreibung: "Anbieter von Lymphdrainage-Hosensystemen mit eigenen Bodyforming-Studios.", erfolge: ["Kundengewinnung für den deutschlandweiten Geräteverkauf gestartet"] },
+  { id: "csu-neumarkt", name: "CSU Neumarkt", branche: "Politik", ort: "Neumarkt i.d.OPf.", lat: 49.29, lng: 11.47, beschreibung: "Kreisverband der CSU in Neumarkt i.d.OPf.", erfolge: ["Wahlkampf erfolgreich bis zum Sieg begleitet"] },
 ];
