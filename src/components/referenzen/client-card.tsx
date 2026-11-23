@@ -58,6 +58,8 @@ export const ClientCard = memo(function ClientCard({ client, isActive, onSelect 
           {client.beschreibung}
         </p>
       )}
+      {client.erfolge.length > 0 && (
+        <>
       <div className="my-3 border-t border-[var(--color-border-token)]" />
       <ul className="space-y-1.5 pl-5">
         {client.erfolge.map((erfolg) => {
@@ -84,6 +86,8 @@ export const ClientCard = memo(function ClientCard({ client, isActive, onSelect 
           );
         })}
       </ul>
+        </>
+      )}
     </button>
   );
 });
