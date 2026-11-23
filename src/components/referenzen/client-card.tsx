@@ -19,6 +19,7 @@ const badgeColors: Record<Branche, string> = {
   GaLaBau: "#65a30d",
   Dienstleistung: "#0f766e",
   Politik: "#1e3a8a",
+  Architektur: "#9333ea",
   Sonstige: "#374151",
 };
 

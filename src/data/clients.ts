@@ -9,6 +9,7 @@ export type Branche =
   | "GaLaBau"
   | "Dienstleistung"
   | "Politik"
+  | "Architektur"
   | "Sonstige";
 
 export type Client = {
@@ -35,6 +36,7 @@ export const BRANCHEN_FILTER: readonly ["Alle", ...Branche[]] = [
   "GaLaBau",
   "Dienstleistung",
   "Politik",
+  "Architektur",
 ];
 
 export const clients: Client[] = [
@@ -71,7 +73,7 @@ export const clients: Client[] = [
   { id: "luger-elektrotechnik", name: "Luger Elektrotechnik", branche: "Handwerk", ort: "Bayern", lat: 49.2, lng: 11.3, beschreibung: "Elektrotechnik-Fachbetrieb, regionaler Handwerksbetrieb", erfolge: ["8 Bewerbungen auf die Elektriker-Stelle", "Elektriker erfolgreich eingestellt — in einem extrem engen Markt"] },
   { id: "joko-dienstleistungen", name: "Joko Dienstleistungen", branche: "GaLaBau", ort: "Nürnberg", lat: 49.47, lng: 11.1, beschreibung: "Garten- und Landschaftsbau mit eigenem Gartenabo.", erfolge: ["47 Bewerbungen auf die Landschaftsgärtner-Stelle", "2 Landschaftsgärtner eingestellt", "61 Kundenanfragen im ersten Monat der Leadkampagne"] },
   { id: "bronder-gartenbau", name: "Garten Bronder", branche: "GaLaBau", ort: "Deutschland", lat: 50.6, lng: 8.2, beschreibung: "GaLaBau-Betrieb seit 43 Jahren mit rund 21 Mitarbeitern — in der Branche bekannt als „der Hecken-Bronder“ für eigene Fertighecken.", erfolge: ["Bundesweite B2B-Leadgenerierung für Fertighecken an GaLaBau-Betriebe"] },
-  { id: "blaza-gartenbau", name: "Blaza Garten", branche: "GaLaBau", ort: "Erolzheim", lat: 48.23, lng: 10.0, beschreibung: "Garten- und Landschaftsbaubetrieb in Oberschwaben.", erfolge: ["Leadgenerierung für Neukunden ab Januar 2027"] },
+  { id: "blaza-gartenbau", name: "Blaza Garten", branche: "GaLaBau", ort: "Erolzheim", lat: 48.23, lng: 10.0, beschreibung: "Garten- und Landschaftsbaubetrieb in Oberschwaben.", erfolge: ["Nach dem Start direkt auf eine 12-monatige Zusammenarbeit erweitert"] },
   { id: "tuttahs-meyer", name: "TUTTAHS & MEYER Ingenieurgesellschaft", branche: "Dienstleistung", ort: "Bochum / Aachen / Berlin", lat: 51.48, lng: 7.22, beschreibung: "Ingenieurbüro für Wasser-, Abwasser- und Energiewirtschaft mit rund 84 Mitarbeitern.", erfolge: ["Seit rund 2 Jahren offene Bauzeichner-Stelle besetzt — eines der am schwersten zu besetzenden Profile"] },
   { id: "telis-oppelt", name: "Telis Finanz — Martin Oppelt", branche: "Dienstleistung", ort: "Burgbernheim", lat: 49.45, lng: 10.32, beschreibung: "Leiter mehrerer Telis-Finanz-Standorte in Mittelfranken.", erfolge: ["Recruiting von selbstständigen Vertriebspartnern (§34d) seit November 2026", "Einzugsgebiet Nürnberg, Fürth und Würzburg"] },
   { id: "rechtsklarheit", name: "Rechtsklarheit", branche: "Dienstleistung", ort: "Deutschland", lat: 52.0, lng: 10.5, beschreibung: "Personal-Brand-Account eines Rechtsanwalts zu Recht und Steuergestaltung.", erfolge: ["Von 0 auf 15.000 Follower in rund 5 Monaten", "Talking-Head-Content zu Steuer- und Rechtsthemen"] },
@@ -84,4 +86,13 @@ export const clients: Client[] = [
   { id: "glanzwerk-hannover", name: "Glanzwerk Hannover", branche: "Dienstleistung", ort: "Hannover", lat: 52.37, lng: 9.73, beschreibung: "Gebäudereinigung aus Hannover.", erfolge: ["3 Kunden für die Unterhaltsreinigung in den ersten 30 Tagen gewonnen", "Monatsumsatz von 10.000 EUR auf über 30.000 EUR skaliert", "Jetzt Mitarbeitergewinnung, um das Wachstum zu stemmen"] },
   { id: "orkanor", name: "Orkanor GmbH", branche: "Dienstleistung", ort: "Hamburg", lat: 53.55, lng: 9.99, beschreibung: "Hamburger Unternehmen im Ausbau seines Vertriebsteams.", erfolge: ["Ersten Vertriebspartner bereits in der ersten Woche gewonnen", "Mittlerweile über 10 neue Mitarbeiter gefunden"] },
   { id: "dlc-plus", name: "DLC+ Steuerberatung", branche: "Dienstleistung", ort: "München", lat: 48.14, lng: 11.57, beschreibung: "Große Steuerkanzlei in München.", erfolge: ["Sehr regelmäßig lukrative Mandate gewonnen"] },
+  { id: "meister-baecker-scherf", name: "Meister Bäcker Scherf", branche: "Food & Beverage", ort: "Unterwellenborn", lat: 50.65, lng: 11.45, beschreibung: "Handwerksbäckerei in Thüringen.", erfolge: ["Mitarbeitergewinnung für Bäcker- und Konditorgesellen gestartet"] },
+  { id: "baeckerei-kleeberger", name: "Bäckerei Kleeberger", branche: "Food & Beverage", ort: "Gunzenhausen", lat: 49.11, lng: 10.75, beschreibung: "Handwerksbäckerei in Mittelfranken.", erfolge: ["Zusammenarbeit nach dem ersten Projekt erweitert"] },
+  { id: "zenit-service", name: "ZENIT Service GmbH", branche: "Dienstleistung", ort: "Stralsund / Greifswald", lat: 54.31, lng: 13.09, beschreibung: "Gebäudereinigung in Vorpommern.", erfolge: ["Kundengewinnung für die Unterhaltsreinigung"] },
+  { id: "genc-gebaeudereinigung", name: "Genc Gebäudereinigung GmbH", branche: "Dienstleistung", ort: "Deutschland", lat: 48.25, lng: 11.65, beschreibung: "Gebäudereinigung.", erfolge: ["Zusammenarbeit erweitert, inklusive neuer Website"] },
+  { id: "querbeet", name: "Querbeet GmbH", branche: "GaLaBau", ort: "Lippstadt", lat: 51.67, lng: 8.35, beschreibung: "Unternehmen aus Lippstadt.", erfolge: ["Zusammenarbeit seit Oktober 2026"] },
+  { id: "formwaende", name: "FORMWÆNDE", branche: "Architektur", ort: "Lüneburg", lat: 53.25, lng: 10.41, beschreibung: "Innenarchitekturbüro mit Designkonzepten für Gastronomie, Hotellerie, Retail und Private Luxury.", erfolge: ["Mitarbeitergewinnung gestartet"] },
+  { id: "studio50", name: "Studio 50 Plan & Design", branche: "Architektur", ort: "Deutschland", lat: 51.0, lng: 9.0, beschreibung: "Architektur- und Designbüro.", erfolge: ["Zusammenarbeit seit November 2026"] },
+  { id: "desa-architekten", name: "DeSa Architekten", branche: "Architektur", ort: "Deutschland", lat: 50.5, lng: 9.5, beschreibung: "Architekturbüro.", erfolge: ["Imagevideo in Umsetzung"] },
+  { id: "cobb-raumausstattung", name: "Cobb Raumausstattung", branche: "Einrichtung", ort: "Deutschland", lat: 50.8, lng: 8.8, beschreibung: "Raumausstatter.", erfolge: ["Zusammenarbeit seit November 2026"] },
 ];
